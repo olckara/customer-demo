@@ -2,12 +2,12 @@ package com.karaduman.demo.iban;
 
 import org.springframework.data.repository.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @org.springframework.stereotype.Repository
-interface IbanRepository extends Repository<Iban, Integer> {
+interface IbanRepository extends Repository<Iban, String> {
 
-  Optional<Iban> findById(Integer customerId);
+  List<Iban> findByCustomerId(Integer customerId);
 
   void save(Iban entity);
 }
